@@ -21,5 +21,16 @@ class ViewController: UIViewController {
     }
 
 
+    @IBAction func SignUp(_ sender: UIButton) {
+    }
+
+    @IBAction func ShowRoom(_ sender: UIButton) {
+    }
+    
+    @IBAction func Update_iPad(_ sender: UIButton) {
+    }
+    
+    @IBAction func IdentifyBeacon(_ sender: UIButton) {
+    }
 }
 
