@@ -220,8 +220,12 @@
                                     <segue destination="BYZ-38-t0r" kind="show" id="RE0-ca-YKH"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="This is the page for Sign Up" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Auq-1n-FWg">
-                                <rect key="frame" x="52" y="230" width="216" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is the page for Sign Up" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Auq-1n-FWg">
+                                <rect key="frame" x="54.5" y="230" width="211.5" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="211.5" id="2dN-Jz-nz0"/>
+                                    <constraint firstAttribute="height" constant="21" id="DfB-fo-jb2"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
