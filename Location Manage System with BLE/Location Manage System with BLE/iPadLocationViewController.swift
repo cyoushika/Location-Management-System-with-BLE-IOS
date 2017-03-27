@@ -9,13 +9,19 @@
 import Foundation
 import UIKit
 
+var location = ""
+
 class iPadLocationViewController: UIViewController{
     
-    var UserEndEdit = false
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         LocationName.placeholder = "Please input the location"
+        if location != ""
+        {
+            ResultShower.text = location
+        }
     }
     
     override func didReceiveMemoryWarning() {
@@ -25,7 +31,8 @@ class iPadLocationViewController: UIViewController{
     
     @IBAction func EndEdit(_ sender: UIButton) {
         if LocationName.text != nil{
-            ResultShower.text = LocationName.text
+            location = LocationName.text!
+            ResultShower.text = location
         }
     }
     
@@ -33,7 +40,4 @@ class iPadLocationViewController: UIViewController{
     
     @IBOutlet weak var LocationName: UITextField!
     
-    @IBAction func Back_Menu(_ sender: UIButton) {
-        
-    }
 }

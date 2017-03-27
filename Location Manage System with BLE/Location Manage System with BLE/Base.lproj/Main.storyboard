@@ -133,7 +133,6 @@
                                 <rect key="frame" x="113" y="430" width="94" height="30"/>
                                 <state key="normal" title="Back to Menu"/>
                                 <connections>
-                                    <action selector="Back_Menu:" destination="hO3-fu-XLo" eventType="touchUpInside" id="eJ2-du-7v8"/>
                                     <segue destination="BYZ-38-t0r" kind="showDetail" action="showViewController:sender:" id="cIp-EH-RDN"/>
                                 </connections>
                             </button>
@@ -317,6 +316,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="YMI-yC-L00"/>
+        <segue reference="cIp-EH-RDN"/>
     </inferredMetricsTieBreakers>
 </document>
