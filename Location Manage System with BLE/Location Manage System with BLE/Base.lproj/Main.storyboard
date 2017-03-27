@@ -29,7 +29,7 @@
                                         <state key="normal" title="Sign Up"/>
                                         <connections>
                                             <action selector="SignUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="F5N-ca-KAi"/>
-                                            <segue destination="K6W-tE-ts3" kind="show" id="ZXx-kf-iqe"/>
+                                            <segue destination="K6W-tE-ts3" kind="showDetail" action="showViewController:sender:" id="ZXx-kf-iqe"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M5Z-ts-gy4">
@@ -37,7 +37,7 @@
                                         <state key="normal" title="Show the situation of room"/>
                                         <connections>
                                             <action selector="ShowRoom:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qrq-My-5FD"/>
-                                            <segue destination="IWK-bd-Eo9" kind="show" id="gzL-L2-yja"/>
+                                            <segue destination="IWK-bd-Eo9" kind="showDetail" action="showViewController:sender:" id="gzL-L2-yja"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b82-SZ-KR6">
@@ -45,7 +45,7 @@
                                         <state key="normal" title="Change the location of iPad"/>
                                         <connections>
                                             <action selector="Update_iPad:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2kO-Cg-Ntp"/>
-                                            <segue destination="hO3-fu-XLo" kind="show" id="pwn-1T-CsQ"/>
+                                            <segue destination="hO3-fu-XLo" kind="showDetail" action="showViewController:sender:" id="pwn-1T-CsQ"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U7V-j3-UCY">
@@ -53,7 +53,7 @@
                                         <state key="normal" title="Identify the owner of Beacon"/>
                                         <connections>
                                             <action selector="IdentifyBeacon:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2hH-Ax-rHN"/>
-                                            <segue destination="bSP-sF-zQq" kind="show" id="Q2o-Vt-Nhl"/>
+                                            <segue destination="bSP-sF-zQq" kind="showDetail" action="showViewController:sender:" id="Q2o-Vt-Nhl"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -69,10 +69,10 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
-        <!--View Controller-->
+        <!--Member Location View Controller-->
         <scene sceneID="JLF-Bv-E9z">
             <objects>
-                <viewController id="IWK-bd-Eo9" sceneMemberID="viewController">
+                <viewController id="IWK-bd-Eo9" customClass="MemberLocationViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ghb-jh-zk0"/>
                         <viewControllerLayoutGuide type="bottom" id="Nab-I6-z3w"/>
@@ -86,11 +86,11 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Back to Menu"/>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="xib-Mb-Eqw"/>
+                                    <segue destination="BYZ-38-t0r" kind="showDetail" action="showViewController:sender:" id="xib-Mb-Eqw"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is the page for Showing the members' location" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s9u-eu-7cg">
-                                <rect key="frame" x="10" y="203" width="300" height="75"/>
+                                <rect key="frame" x="10" y="202.5" width="300" height="75"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="75" id="3uu-nG-YDq"/>
                                     <constraint firstAttribute="width" constant="300" id="W6k-WZ-5l5"/>
@@ -111,10 +111,10 @@
             </objects>
             <point key="canvasLocation" x="33.75" y="1025"/>
         </scene>
-        <!--View Controller-->
+        <!--iPad Location View Controller-->
         <scene sceneID="Rh1-of-Gzt">
             <objects>
-                <viewController id="hO3-fu-XLo" sceneMemberID="viewController">
+                <viewController id="hO3-fu-XLo" customClass="iPadLocationViewController" customModule="Location_Manage_System_with_BLE" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="c5Q-oq-ygU"/>
                         <viewControllerLayoutGuide type="bottom" id="5RR-54-cpA"/>
@@ -127,11 +127,12 @@
                                 <rect key="frame" x="113" y="430" width="94" height="30"/>
                                 <state key="normal" title="Back to Menu"/>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="cIp-EH-RDN"/>
+                                    <action selector="Back_Menu:" destination="hO3-fu-XLo" eventType="touchUpInside" id="eJ2-du-7v8"/>
+                                    <segue destination="BYZ-38-t0r" kind="showDetail" action="showViewController:sender:" id="cIp-EH-RDN"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is the page for changing the location of iPad" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pes-IK-ix8">
-                                <rect key="frame" x="10" y="202.5" width="300" height="75"/>
+                                <rect key="frame" x="10" y="203" width="300" height="75"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="22F-ws-J3B"/>
                                     <constraint firstAttribute="height" constant="75" id="Mxs-nO-6tW"/>
@@ -140,6 +141,47 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Izq-pc-4T3">
+                                <rect key="frame" x="10" y="148" width="247" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Y1n-EY-054">
+                                <rect key="frame" x="10" y="36" width="300" height="75"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="vPh-5w-moM">
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="75"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="G2a-GA-2Y7">
+                                                <rect key="frame" x="0.0" y="0.0" width="300" height="75"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="This is the place to show the position of iPad" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8WB-Wf-Cb1">
+                                                        <rect key="frame" x="0.0" y="0.0" width="300" height="75"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="300" id="lr4-i9-sLf"/>
+                                                            <constraint firstAttribute="height" constant="75" id="xv4-V4-uJk"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gH7-K6-gOZ">
+                                <rect key="frame" x="258" y="148" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Return"/>
+                                <connections>
+                                    <action selector="EndEdit:" destination="hO3-fu-XLo" eventType="touchUpInside" id="Rna-GX-HU5"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -149,15 +191,19 @@
                             <constraint firstItem="SrW-d5-vMD" firstAttribute="centerY" secondItem="xYz-gI-bga" secondAttribute="centerY" constant="205" id="lTe-Lo-rqm"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="LocationName" destination="Izq-pc-4T3" id="ogU-Qi-XDX"/>
+                        <outlet property="ResultShower" destination="8WB-Wf-Cb1" id="CMH-gV-5Lw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ohl-wM-wg8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="905.625" y="1025"/>
         </scene>
-        <!--View Controller-->
+        <!--Beacon Identify View Controller-->
         <scene sceneID="XQE-YS-RdZ">
             <objects>
-                <viewController id="bSP-sF-zQq" sceneMemberID="viewController">
+                <viewController id="bSP-sF-zQq" customClass="BeaconIdentifyViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="TNG-Ld-Axq"/>
                         <viewControllerLayoutGuide type="bottom" id="xTi-JL-3XG"/>
@@ -170,11 +216,11 @@
                                 <rect key="frame" x="113" y="430" width="94" height="30"/>
                                 <state key="normal" title="Back to Menu"/>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="YMI-yC-L00"/>
+                                    <segue destination="BYZ-38-t0r" kind="showDetail" action="showViewController:sender:" id="YMI-yC-L00"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is the page for showing the owner of Beacon" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HIK-9D-FFf">
-                                <rect key="frame" x="10.5" y="203" width="300" height="75"/>
+                                <rect key="frame" x="10" y="202.5" width="300" height="75"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="9Gn-CN-KXj"/>
                                     <constraint firstAttribute="height" constant="75" id="s9I-kn-O2y"/>
@@ -197,10 +243,10 @@
             </objects>
             <point key="canvasLocation" x="1732.5" y="1023.75"/>
         </scene>
-        <!--View Controller-->
+        <!--Sign Up View Controller-->
         <scene sceneID="Jj0-Ac-2kM">
             <objects>
-                <viewController id="K6W-tE-ts3" sceneMemberID="viewController">
+                <viewController id="K6W-tE-ts3" customClass="SignUpViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="RNS-wh-2iF"/>
                         <viewControllerLayoutGuide type="bottom" id="G0d-D1-SFn"/>
@@ -217,11 +263,11 @@
                                 </constraints>
                                 <state key="normal" title="Back to Menu"/>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="RE0-ca-YKH"/>
+                                    <segue destination="BYZ-38-t0r" kind="showDetail" action="showViewController:sender:" id="RE0-ca-YKH"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is the page for Sign Up" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Auq-1n-FWg">
-                                <rect key="frame" x="54.5" y="230" width="211.5" height="21"/>
+                                <rect key="frame" x="54.5" y="229.5" width="211.5" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="211.5" id="2dN-Jz-nz0"/>
                                     <constraint firstAttribute="height" constant="21" id="DfB-fo-jb2"/>
@@ -246,6 +292,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="YMI-yC-L00"/>
+        <segue reference="cIp-EH-RDN"/>
     </inferredMetricsTieBreakers>
 </document>

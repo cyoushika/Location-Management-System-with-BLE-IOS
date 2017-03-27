@@ -12,6 +12,7 @@
 		3A0A4FFE1E828F2000D91048 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A0A4FFC1E828F2000D91048 /* Main.storyboard */; };
 		3A0A50001E828F2000D91048 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A0A4FFF1E828F2000D91048 /* Assets.xcassets */; };
 		3A0A50031E828F2000D91048 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A0A50011E828F2000D91048 /* LaunchScreen.storyboard */; };
+		3A61EA401E891BD10056CACD /* iPadLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A61EA3F1E891BD10056CACD /* iPadLocationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		3A0A4FFF1E828F2000D91048 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3A0A50021E828F2000D91048 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3A0A50041E828F2000D91048 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3A61EA3F1E891BD10056CACD /* iPadLocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iPadLocationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 			isa = PBXGroup;
 			children = (
 				3A0A4FF81E828F2000D91048 /* AppDelegate.swift */,
+				3A61EA3F1E891BD10056CACD /* iPadLocationViewController.swift */,
 				3A0A4FFA1E828F2000D91048 /* ViewController.swift */,
 				3A0A4FFC1E828F2000D91048 /* Main.storyboard */,
 				3A0A4FFF1E828F2000D91048 /* Assets.xcassets */,
@@ -139,6 +142,7 @@
 			files = (
 				3A0A4FFB1E828F2000D91048 /* ViewController.swift in Sources */,
 				3A0A4FF91E828F2000D91048 /* AppDelegate.swift in Sources */,
+				3A61EA401E891BD10056CACD /* iPadLocationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,6 +306,7 @@
 				3A0A50091E828F2000D91048 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
