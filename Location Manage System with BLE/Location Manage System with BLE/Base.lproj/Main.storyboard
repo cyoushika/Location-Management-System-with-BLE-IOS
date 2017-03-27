@@ -81,16 +81,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZFL-ez-5ni">
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="rwG-yj-Pc2">
                                 <rect key="frame" x="113" y="430" width="94" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Back to Menu"/>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="showDetail" action="showViewController:sender:" id="xib-Mb-Eqw"/>
-                                </connections>
-                            </button>
+                            </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is the page for Showing the members' location" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s9u-eu-7cg">
-                                <rect key="frame" x="10" y="202.5" width="300" height="75"/>
+                                <rect key="frame" x="10" y="203" width="300" height="75"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="75" id="3uu-nG-YDq"/>
                                     <constraint firstAttribute="width" constant="300" id="W6k-WZ-5l5"/>
@@ -99,10 +94,21 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZFL-ez-5ni">
+                                <rect key="frame" x="113" y="430" width="94" height="30"/>
+                                <state key="normal" title="Back to Menu"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="showDetail" action="showViewController:sender:" id="xib-Mb-Eqw"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="ZFL-ez-5ni" firstAttribute="centerX" secondItem="hBh-Z4-YzO" secondAttribute="centerX" id="6sh-H6-hlT"/>
                             <constraint firstItem="s9u-eu-7cg" firstAttribute="centerY" secondItem="hBh-Z4-YzO" secondAttribute="centerY" id="AMX-CJ-qIu"/>
+                            <constraint firstItem="rwG-yj-Pc2" firstAttribute="centerX" secondItem="hBh-Z4-YzO" secondAttribute="centerX" id="MdQ-Cb-ib2"/>
+                            <constraint firstItem="ZFL-ez-5ni" firstAttribute="centerY" secondItem="hBh-Z4-YzO" secondAttribute="centerY" constant="205" id="R1r-9Y-KIF"/>
+                            <constraint firstItem="rwG-yj-Pc2" firstAttribute="centerY" secondItem="hBh-Z4-YzO" secondAttribute="centerY" constant="205" id="UP6-EW-vBP"/>
                             <constraint firstItem="s9u-eu-7cg" firstAttribute="centerX" secondItem="hBh-Z4-YzO" secondAttribute="centerX" id="zcc-yg-tvQ"/>
                         </constraints>
                     </view>
@@ -131,63 +137,82 @@
                                     <segue destination="BYZ-38-t0r" kind="showDetail" action="showViewController:sender:" id="cIp-EH-RDN"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is the page for changing the location of iPad" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pes-IK-ix8">
-                                <rect key="frame" x="10" y="203" width="300" height="75"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="300" id="22F-ws-J3B"/>
-                                    <constraint firstAttribute="height" constant="75" id="Mxs-nO-6tW"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Izq-pc-4T3">
-                                <rect key="frame" x="10" y="148" width="247" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Y1n-EY-054">
-                                <rect key="frame" x="10" y="36" width="300" height="75"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="45" translatesAutoresizingMaskIntoConstraints="NO" id="wS9-Nb-h7y">
+                                <rect key="frame" x="10" y="105" width="300" height="270"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="vPh-5w-moM">
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Y1n-EY-054">
                                         <rect key="frame" x="0.0" y="0.0" width="300" height="75"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="G2a-GA-2Y7">
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="vPh-5w-moM">
                                                 <rect key="frame" x="0.0" y="0.0" width="300" height="75"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="This is the place to show the position of iPad" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8WB-Wf-Cb1">
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="G2a-GA-2Y7">
                                                         <rect key="frame" x="0.0" y="0.0" width="300" height="75"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is the place to show the position of iPad" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8WB-Wf-Cb1">
+                                                                <rect key="frame" x="0.0" y="0.0" width="300" height="75"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="300" id="lr4-i9-sLf"/>
+                                                                    <constraint firstAttribute="height" constant="75" id="xv4-V4-uJk"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="300" id="lr4-i9-sLf"/>
-                                                            <constraint firstAttribute="height" constant="75" id="xv4-V4-uJk"/>
+                                                            <constraint firstItem="8WB-Wf-Cb1" firstAttribute="centerX" secondItem="G2a-GA-2Y7" secondAttribute="centerX" id="8tn-oT-f24"/>
+                                                            <constraint firstItem="8WB-Wf-Cb1" firstAttribute="centerY" secondItem="G2a-GA-2Y7" secondAttribute="centerY" id="N4z-k4-mBV"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
+                                                    </stackView>
                                                 </subviews>
                                             </stackView>
                                         </subviews>
                                     </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="7Iw-3U-xRd">
+                                        <rect key="frame" x="0.0" y="120" width="300" height="30"/>
+                                        <subviews>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Izq-pc-4T3">
+                                                <rect key="frame" x="0.0" y="0.0" width="246" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="Bvv-O1-xoA"/>
+                                                    <constraint firstAttribute="width" constant="247" id="ydJ-bH-5q8"/>
+                                                </constraints>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gH7-K6-gOZ">
+                                                <rect key="frame" x="254" y="0.0" width="46" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="46" id="C2I-eo-K1c"/>
+                                                    <constraint firstAttribute="height" constant="30" id="uTg-nw-ffa"/>
+                                                </constraints>
+                                                <state key="normal" title="Return"/>
+                                                <connections>
+                                                    <action selector="EndEdit:" destination="hO3-fu-XLo" eventType="touchUpInside" id="Rna-GX-HU5"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is the page for changing the location of iPad" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pes-IK-ix8">
+                                        <rect key="frame" x="0.0" y="195" width="300" height="75"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="300" id="22F-ws-J3B"/>
+                                            <constraint firstAttribute="height" constant="75" id="Mxs-nO-6tW"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gH7-K6-gOZ">
-                                <rect key="frame" x="258" y="148" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Return"/>
-                                <connections>
-                                    <action selector="EndEdit:" destination="hO3-fu-XLo" eventType="touchUpInside" id="Rna-GX-HU5"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="wS9-Nb-h7y" firstAttribute="centerY" secondItem="xYz-gI-bga" secondAttribute="centerY" id="2vw-tp-JIR"/>
                             <constraint firstItem="SrW-d5-vMD" firstAttribute="centerX" secondItem="xYz-gI-bga" secondAttribute="centerX" id="5De-8F-1f2"/>
-                            <constraint firstItem="pes-IK-ix8" firstAttribute="centerY" secondItem="xYz-gI-bga" secondAttribute="centerY" id="89a-se-Nu5"/>
-                            <constraint firstItem="pes-IK-ix8" firstAttribute="centerX" secondItem="xYz-gI-bga" secondAttribute="centerX" id="8fs-IR-Yid"/>
+                            <constraint firstItem="wS9-Nb-h7y" firstAttribute="centerX" secondItem="xYz-gI-bga" secondAttribute="centerX" id="AlQ-jc-hs2"/>
                             <constraint firstItem="SrW-d5-vMD" firstAttribute="centerY" secondItem="xYz-gI-bga" secondAttribute="centerY" constant="205" id="lTe-Lo-rqm"/>
                         </constraints>
                     </view>
@@ -292,6 +317,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="cIp-EH-RDN"/>
+        <segue reference="YMI-yC-L00"/>
     </inferredMetricsTieBreakers>
 </document>
