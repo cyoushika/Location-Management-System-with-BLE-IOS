@@ -3,15 +3,13 @@ import UIKit
 class SignUpViewController : UIViewController,UIPickerViewDataSource,UIPickerViewDelegate
 {
     
-    @IBOutlet weak var picker: UIPickerView!
-    
     var pickerData: [String] = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         pickerData = ["Male","Female"]
-        self.picker.dataSource = self
-        self.picker.delegate = self
+        //self.picker.dataSource = self
+        //self.picker.delegate = self
     }
     
     override func didReceiveMemoryWarning() {
