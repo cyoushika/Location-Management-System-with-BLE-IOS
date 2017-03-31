@@ -1,6 +1,6 @@
 import UIKit
 
-class SignUpTableViewController : UITableViewController
+class SignUpTableViewController : UITableViewController,UITextFieldDelegate
 {
     
     var flag = 1
@@ -16,11 +16,11 @@ class SignUpTableViewController : UITableViewController
     
     @IBAction func Accept(_ sender: UIButton) {
         // When user tap the Accept Button, upload all the information
-        if (NameTextField.text != nil && EmailTextField.text != nil && SexSegement.titleForSegment(at: SexSegement.selectedSegmentIndex) != nil)
+        if (NameTextField.text != "" && EmailTextField.text != "" && SexSegement.titleForSegment(at: SexSegement.selectedSegmentIndex) != "")
         {
-            print(NameTextField.text)
-            print(EmailTextField.text)
-            print(SexSegement.titleForSegment(at: SexSegement.selectedSegmentIndex))
+            print(NameTextField.text!)
+            print(EmailTextField.text!)
+            print(SexSegement.titleForSegment(at: SexSegement.selectedSegmentIndex)!)
             print("Accept!")
         }
         else {
@@ -36,7 +36,11 @@ class SignUpTableViewController : UITableViewController
         PhotoImage.image = UIImage(named: "photo-icon.png")
         NameTextField.placeholder = "Please input your name"
         EmailTextField.placeholder = "Please input your Email"
+        NameTextField.delegate = self
+        EmailTextField.delegate = self
         // Only when User is trying edit SexCell, the PickerView will show up
+        NameTextField.returnKeyType = UIReturnKeyType.done
+        EmailTextField.returnKeyType = UIReturnKeyType.done
     }
     
     override func didReceiveMemoryWarning() {
@@ -52,5 +56,14 @@ class SignUpTableViewController : UITableViewController
             PhotoCell.isSelected = false
         }
         
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+       self.view.endEditing(true)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return (true)
     }
 }

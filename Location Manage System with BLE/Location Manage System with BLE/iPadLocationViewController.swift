@@ -11,17 +11,34 @@ import UIKit
 
 var location = ""
 
-class iPadLocationViewController: UIViewController{
+class iPadLocationViewController: UIViewController,UITextFieldDelegate{
     
     
+    @IBOutlet weak var Location: UILabel!
+    
+    @IBOutlet weak var LocationTextField: UITextField!
+    
+    @IBOutlet weak var Accept: UIButton!
+    
+    @IBAction func Accept(_ sender: UIButton) {
+        Location.text = LocationTextField.text
+        location = (LocationTextField!.text)!
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        LocationName.placeholder = "Please input the location"
-        if location != ""
+        LocationTextField.placeholder = "Please input the location"
+        LocationTextField.delegate = self
+        if location == ""
         {
-            ResultShower.text = location
+            Location.text = "Unknown"
         }
+        else
+        {
+            Location.text = location
+            
+        }
+        LocationTextField.returnKeyType = UIReturnKeyType.done
     }
     
     override func didReceiveMemoryWarning() {
@@ -29,15 +46,13 @@ class iPadLocationViewController: UIViewController{
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func EndEdit(_ sender: UIButton) {
-        if LocationName.text != nil{
-            location = LocationName.text!
-            ResultShower.text = location
-        }
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
     }
     
-    @IBOutlet weak var ResultShower: UILabel!
-    
-    @IBOutlet weak var LocationName: UITextField!
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
     
 }
