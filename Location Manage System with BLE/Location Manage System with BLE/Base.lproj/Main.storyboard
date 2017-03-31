@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -99,7 +98,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="0Od-oE-8hG">
-                            <rect key="frame" x="0.0" y="455" width="320" height="44"/>
+                            <rect key="frame" x="0.0" y="382" width="320" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <state key="normal" title="Accept"/>
                             <connections>
@@ -118,13 +117,15 @@
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ze3-9Q-dk3">
                                                     <rect key="frame" x="100" y="9" width="120" height="120"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="120" id="3HK-5k-nnK"/>
+                                                        <constraint firstAttribute="height" constant="120" id="N9l-wY-b86"/>
+                                                    </constraints>
                                                 </imageView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="Ze3-9Q-dk3" firstAttribute="top" secondItem="1Tx-f0-byU" secondAttribute="top" constant="9" id="BlD-QC-VqI"/>
-                                                <constraint firstItem="Ze3-9Q-dk3" firstAttribute="leading" secondItem="1Tx-f0-byU" secondAttribute="leading" constant="100" id="UcV-1L-8ce"/>
-                                                <constraint firstAttribute="trailing" secondItem="Ze3-9Q-dk3" secondAttribute="trailing" constant="100" id="qfz-fa-TOf"/>
-                                                <constraint firstAttribute="bottom" secondItem="Ze3-9Q-dk3" secondAttribute="bottom" constant="8" id="wUU-Mt-rK7"/>
+                                                <constraint firstItem="Ze3-9Q-dk3" firstAttribute="centerX" secondItem="1Tx-f0-byU" secondAttribute="centerX" id="YNs-d7-heJ"/>
+                                                <constraint firstItem="Ze3-9Q-dk3" firstAttribute="centerY" secondItem="1Tx-f0-byU" secondAttribute="centerY" id="f28-do-WaO"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -184,45 +185,22 @@
                             </tableViewSection>
                             <tableViewSection headerTitle="Sex :" id="ER8-FW-aur">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SexCell" id="ze8-9t-PYE">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="vjB-Wj-reH">
                                         <rect key="frame" x="0.0" y="338" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ze8-9t-PYE" id="HGp-Ta-t5D">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vjB-Wj-reH" id="j60-wo-0qb">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Il5-N8-B70">
-                                                    <rect key="frame" x="8" y="8" width="304" height="27.5"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="cgF-8z-SF3">
+                                                    <rect key="frame" x="102" y="7" width="117" height="29"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <segments>
+                                                        <segment title="Male"/>
+                                                        <segment title="Female"/>
+                                                    </segments>
+                                                </segmentedControl>
                                             </subviews>
-                                            <constraints>
-                                                <constraint firstAttribute="bottomMargin" secondItem="Il5-N8-B70" secondAttribute="bottom" id="ML9-lR-5jj"/>
-                                                <constraint firstItem="Il5-N8-B70" firstAttribute="top" secondItem="HGp-Ta-t5D" secondAttribute="topMargin" id="Qgh-8L-sJV"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="Il5-N8-B70" secondAttribute="trailing" id="f45-45-EpF"/>
-                                                <constraint firstItem="Il5-N8-B70" firstAttribute="leading" secondItem="HGp-Ta-t5D" secondAttribute="leadingMargin" id="fDr-Qg-Tqd"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PickerCell" rowHeight="73" id="Lld-Ri-8uQ">
-                                        <rect key="frame" x="0.0" y="382" width="320" height="73"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Lld-Ri-8uQ" id="UQ9-aY-KjV">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="72"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Cy-YB-65d">
-                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="72.5"/>
-                                                </pickerView>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="5Cy-YB-65d" secondAttribute="bottom" id="05K-dm-1av"/>
-                                                <constraint firstItem="5Cy-YB-65d" firstAttribute="top" secondItem="UQ9-aY-KjV" secondAttribute="top" id="4cL-Rd-hWd"/>
-                                                <constraint firstAttribute="trailing" secondItem="5Cy-YB-65d" secondAttribute="trailing" id="bC3-ok-ZMd"/>
-                                                <constraint firstItem="5Cy-YB-65d" firstAttribute="leading" secondItem="UQ9-aY-KjV" secondAttribute="leading" id="c2h-6n-gdl"/>
-                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
@@ -240,10 +218,7 @@
                         <outlet property="NameTextField" destination="JHP-27-p2G" id="P5F-MB-Zwy"/>
                         <outlet property="PhotoCell" destination="ddh-aL-TTg" id="Rra-Ys-IFQ"/>
                         <outlet property="PhotoImage" destination="Ze3-9Q-dk3" id="tcS-5Q-fQy"/>
-                        <outlet property="Picker" destination="5Cy-YB-65d" id="aRe-vQ-8CY"/>
-                        <outlet property="PickerCell" destination="Lld-Ri-8uQ" id="tcQ-Qa-q4K"/>
-                        <outlet property="SexCell" destination="ze8-9t-PYE" id="OY6-Aw-6Zc"/>
-                        <outlet property="SexLabel" destination="Il5-N8-B70" id="NV0-mz-d3W"/>
+                        <outlet property="SexSegement" destination="cgF-8z-SF3" id="dCo-Or-2wG"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Huw-0F-SnQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
